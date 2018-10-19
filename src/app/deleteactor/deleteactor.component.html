@@ -1,0 +1,17 @@
+<div class="section" class="background">
+  <br>
+  <table class="table table-striped">
+    <tr>
+      <th><strong>Name</strong></th>
+      <th><strong>Birth Year</strong></th>
+      <th><strong>Delete?</strong></th>
+    </tr>
+    <tr *ngFor="let item of actorsDB">
+      <td>{{item.name}}</td>
+      <td>{{item.bYear}}</td>
+      <td>
+        <button type="submit" class="" (click)="onDeleteActor(item)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

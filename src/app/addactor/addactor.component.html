@@ -1,0 +1,21 @@
+<div class="section center-text" class="background">
+  <br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label class="label-1" for="actorName"><strong>Full Name</strong></label>
+          <input type="text" class="form-control" id="actorName" [(ngModel)]="fullName">
+        </div>
+        <div class="form-group">
+          <label class="label-1" for="actorName"><strong>Birth Year</strong></label>
+          <input type="number" class="form-control" id="actorName" [(ngModel)]="bYear">
+        </div>
+        <button type="submit" class="" (click)="onSaveActor()">Save Actor</button>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+  </div>
+  <br>
+</div>

@@ -1,0 +1,16 @@
+<div class="section" class="background">
+  <table class="table table-striped">
+    <tr>
+      <th><strong>Title</strong></th>
+      <th><strong>Year</strong></th>
+      <th><strong>Delete?</strong></th>
+    </tr>
+    <tr *ngFor="let item of moviesDB">
+      <td>{{item.title}}</td>
+      <td>{{item.year}}</td>
+      <td>
+        <button type="submit" class="" (click)="onDeleteMovie(item)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>

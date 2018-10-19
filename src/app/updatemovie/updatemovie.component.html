@@ -1,0 +1,54 @@
+<div class="section" class="background">
+  <table class="table table-striped">
+    <tr>
+      <th><strong>Title</strong></th>
+      <th><strong>Year</strong></th>
+      <th><strong>Select!</strong></th>
+    </tr>
+    <tr *ngFor="let movies of moviesDB">
+      <td>{{movies.title}}</td>
+      <td>{{movies.year}}</td>
+      <td>
+        <button type="submit" class="" (click)="onSelectMovie(movies)">Select</button>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th><strong>Title</strong></th>
+      <th><strong>Year</strong></th>
+      <th><strong>Select!</strong></th>
+    </tr>
+    <tr *ngFor="let actors of actorsDB">
+      <td>{{actors.name}}</td>
+      <td>{{actors.bYear}}</td>
+      <td>
+        <button type="submit" class="" (click)="onSelectActor(actors)">Select</button>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <div class="container-fluid center-text">
+    <div class="row">
+      <div class="col-sm"></div>
+      <div class="col-sm">
+        <div class="form-group">
+          <label class="label-1" for="movieName">Actor</label>
+          <input type="text" class="form-control" id="actorName" [(ngModel)]="fullName" disabled>
+        </div>
+        <div class="form-group">
+          <label class="label-1" for="movieName">Movie Title</label>
+          <input type="text" class="form-control" id="movieName" [(ngModel)]="movieTitle" disabled>
+        </div>
+        <div class="form-group">
+          <label class="label-1" for="movieName">Year of Movie</label>
+          <input type="number" class="form-control" id="movieName" [(ngModel)]="movieYear" disabled>
+        </div>
+        <button type="submit" class="" (click)="onAddMovieToActor()">Update Actor</button>
+      </div>
+      <div class="col-sm"></div>
+    </div>
+  </div>
+  <br>
+</div>
